@@ -47,12 +47,21 @@ const arr3 = [
 ]
 
 function filterTheCat(creatures) {
-    let returnArr = creatures.filter((c) => {if (c.type === "cat") {return c};});
-    return returnArr;
+    // let returnArr = creatures.filter((c) => {if (c.type === "cat") {return c};});
+    // return returnArr;
+
+    // const result = creatures.map(creature => {
+    //     if (creature.type === "cat") {
+    //         return {...creature, note : "This is an amazing cat!"};
+    //     }
+    // })
+    // return result.filter(c=>c);
+
+    return creatures.map(creature => creature.type === "cat"? {...creature, note: "This is an amazing cat!"}:undefined).filter(c=>c);
 }
 
 console.log(filterTheCat(arr3));
-
+console.log(arr3);
 /* let a = 1;
 let b = a;
 
