@@ -1,0 +1,157 @@
+body,
+body *,
+body *::before,
+body *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	background: transparent;
+
+	font-family: inherit;
+	text-decoration: none;
+	outline: none;
+}
+
+ol,
+ul,
+li {
+	display: block;
+
+	list-style: none;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+a img {
+	border: none;
+}
+
+button,
+a {
+	cursor: pointer;
+
+	color: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+button,
+input,
+textarea,
+select {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+
+	border-radius: 0;
+}
+
+div#root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #e6e6e6;
+
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #138073;
+
+	form.application {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 400px;
+		width: 100vw;
+		max-width: 550px;
+
+		h2 {
+			align-self: flex-end;
+
+			margin: 0px 30px;
+
+			font-size: 24px;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+		}
+
+		@media (min-width: 600px) {
+			h2 {
+				align-self: center;
+			}
+		}
+
+		input[type="text"],
+		input[type="email"] {
+			width: calc(100% - 60px);
+			height: 64px;
+
+			margin: 0px 30px;
+			padding-left: 30px;
+			border: 1px solid black;
+			background-color: #ffffff;
+
+			font-weight: 600;
+			color: inherit;
+		}
+
+		div.input-container {
+			display: flex;
+			align-items: center;
+			width: calc(100% - 60px);
+			height: 64px;
+
+			margin: 0px 30px;
+
+			input[type="checkbox"] {
+				width: 20px;
+				min-width: 20px;
+				height: 20px;
+
+				margin-right: 15px;
+				border: 1px solid black;
+				background-color: white;
+			}
+
+			input.checked {
+				background-image: url(./pic/tick.png);
+				background-repeat: no;
+				background-clip: clip;
+				background-size: contain;
+
+				flex-shrink: 0;
+			}
+
+			label {
+				font-weight: 600;
+
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		button {
+			width: 260px;
+			height: 64px;
+
+			background-color: #39b69f;
+
+			font-size: 12px;
+			letter-spacing: 0.2em;
+			font-weight: 600;
+			text-transform: uppercase;
+			color: white;
+		}
+	}
+}
